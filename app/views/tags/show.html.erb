@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @tag.location %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @tag.note %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @tag.url %>
+</p>
+
+<p>
+  <strong>Audio:</strong>
+  <%= @tag.audio %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @tag.video %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @tag.image %>
+</p>
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %>
