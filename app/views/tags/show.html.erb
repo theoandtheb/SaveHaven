@@ -12,22 +12,22 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @tag.url %>
+  <a href ="<%= @tag.url %>"><%= @tag.url %></a>
 </p>
 
 <p>
   <strong>Audio:</strong>
-  <%= @tag.audio %>
+  <audio controls><source src="<%= @tag.audio %>" type="audio/mpeg"></audio>
 </p>
 
 <p>
   <strong>Video:</strong>
-  <%= @tag.video %>
+  <iframe width="560" height="315" src="//<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
 </p>
 
 <p>
   <strong>Image:</strong>
-  <%= @tag.image %>
+  <img src="<%= @tag.image %>">
 </p>
 
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
