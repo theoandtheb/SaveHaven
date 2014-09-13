@@ -4,31 +4,23 @@
   <strong>Location:</strong>
   <%= @tag.location %>
 </p>
-
-<p>
-  <strong>Note:</strong>
-  <%= @tag.note %>
-</p>
-
 <p>
   <strong>Url:</strong>
   <a href ="<%= @tag.url %>"><%= @tag.url %></a>
 </p>
 
-<p>
-  <strong>Audio:</strong>
-  <audio controls><source src="<%= @tag.audio %>" type="audio/mpeg"></audio>
-</p>
+<% if @tag.audio %>
+  <% render 'audio'%> 
+<% elsif @tag.video %> 
+  <% render 'video' %>
+<% elsif @tag.note %> 
+  <% render 'note' %>
+<% elsif @tag.note %> 
+  <% render 'image' %>
+<% else %>
+  <h1>Sorry this tag has no content</h1>
+<% end %>
 
-<p>
-  <strong>Video:</strong>
-  <iframe width="560" height="315" src="//<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <img src="<%= @tag.image %>">
-</p>
 
 <%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>
