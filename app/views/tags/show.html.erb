@@ -22,24 +22,36 @@
 
   <% if @tag.note != "" %> 
     <%= render 'note' %>
+  <% elsif %>
+    <p></p>
   <% end %>
   <% if @tag.url != "" %>
     <%= render 'url' %> 
+  <% elsif %>
+    <p></p>
   <% end %>
   <% if @tag.image != "" %> 
     <%= render 'image' %>
+  <% elsif %>
+    <p></p>
   <% end %>
   <% if @tag.audio != "" %>
     <%= render 'audio'%> 
+  <% elsif %>
+    <p></p>
   <% end %>
   <% if @tag.video != "" %> 
     <%= render 'video' %>
+  <% elsif %>
+    <p></p>
   <% end %>
   <% if @tag.phone != "" %> 
     <%= render 'phone' %>
+  <% elsif %>
+    <p></p>
   <% end %>
 
-
+<!-- 
   <p>
     <strong>Audio:</strong><br>
     <audio controls><source src="<%= @tag.audio %>" type="audio/mpeg"></audio>
@@ -53,7 +65,7 @@
   <p>
     <strong>Image:</strong>
     <img src="<%= @tag.image %>">
-  </p>
+  </p> -->
 
   <%= link_to 'Edit', edit_tag_path(@tag) %> |
   <%= link_to 'Back', tags_path %>
