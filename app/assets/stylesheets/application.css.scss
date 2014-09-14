@@ -89,6 +89,7 @@ div#header {
 
 .item p {
 	text-align: center;
+	font-size: 20px;
 }
 
 form label {
@@ -101,6 +102,39 @@ form label {
 	background: rgba(255, 255, 255,.5);
 	padding: 20px;
 	border-radius: 15px;
+}
+
+.visible_sm {
+		display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+	audio, iframe {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.visible_sm {
+		display: none;
+}
+
+}
+
+
+@media screen and (max-width: 460px) {
+	audio{
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.hidden_sm {
+		display: none;
+	}
+
+	.visible_sm {
+		display: block;
+	}
 }
 
 	
