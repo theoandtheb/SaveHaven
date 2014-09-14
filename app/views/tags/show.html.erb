@@ -1,28 +1,34 @@
-
-<div class="row">
-
 <p id="notice"><%= notice %></p>
 
-<% if @tag.url != "" %>
-  <%= render 'url'%> 
-<% end %>
-<% if @tag.audio != "" %>
-  <%= render 'audio'%> 
-<% end %>
-<% if @tag.video != "" %> 
-  <%= render 'video' %>
-<% end %>
-<% if @tag.note != "" %> 
-  <%= render 'note' %>
-<% end %>
-<% if @tag.note != "" %> 
-  <%= render 'image' %>
-<% end %>
-<% if @tag.phone != "" %> 
-  <%= render 'phone' %>
-<% end %>
+<p>
+  <strong>Location:</strong>
+  <%= @tag.location %>
+</p>
 
+<p>
+  <strong>Note:</strong>
+  <%= @tag.note %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <a href ="<%= @tag.url %>"><%= @tag.url %></a>
+</p>
+
+<p>
+  <strong>Audio:</strong>
+  <audio controls><source src="<%= @tag.audio %>" type="audio/mpeg"></audio>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <iframe width="560" height="315" src="//<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @tag.image %>">
+</p>
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>
-<%= link_to 'Edit', edit_tag_path(@tag) %>
-
-</div>

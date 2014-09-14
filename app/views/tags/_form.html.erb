@@ -33,13 +33,9 @@
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.text_field :image %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "button small radius right success" %>
   </div>
 <% end %>
