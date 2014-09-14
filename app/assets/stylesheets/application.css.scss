@@ -14,6 +14,20 @@
  *= require_self
  */
 
+@import "animate";
+@import "li-scroller";
+@import "demo";
+@import "fadeThrough";
+
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+$padding: 10px;
+
+
+.padding-10 {
+	padding-top: $padding;
+} 
+
 main {
 	background: none;
 }
@@ -22,29 +36,71 @@ body {
 	background: #1abc9c;
 }
 
+.top-bar {
+	background: none;
+
+	.name a:hover {
+		background: none;
+	}
+}
+
 div#header {
 	width: 100%;
-
+	text-align: center;
 	margin-top: 5%;
-	position: relative;
+	position: relativ
 
-		h1 {
+		h1,h2 {
 			color: #fff;
 			display: inline-block;
-			text-align: center;
-			margin: 0 42.5%;
+			font-family: 'Roboto', sans-serif;
 		}
 
-		img {
-			margin: 20px 37.5%;
+		h1 {
+			font-size: 75px;
+			color: #ecf0f1;
+			margin-bottom: -20px;
+			border-top: 2px solid #ecf0f1;
+			border-bottom: 2px solid #ecf0f1;
+			padding: 2% 0;
 		}
 
-		#border {
-			border-bottom: 3px solid #fff;
+		.content {
 			margin: 5px 150px;
+
+			h2 {
+				font-size: 55px;
+				margin-top: 30px;
+				color: #ecf0f1;
+			}
+		}
+
+
+		.tickercontainer {
+			margin-left: 26.50%;
 		}
 }
 
+.panel {
+	background: none;
+	border: none;
+}
 
+
+.item p {
+	text-align: center;
+}
+
+form label {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+.tag {
+	background: rgba(255, 255, 255,.5);
+	padding: 20px;
+	border-radius: 15px;
+}
 
 	

@@ -12,9 +12,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.li-scroller.1.0
 //= require turbolinks
 //= require foundation
+//= require plugins
+//= require demo
+//= require atbo-fadethrough-1.0
 //= require_tree .
+
 $(function() {
   $(document).foundation();
+
+  var active_btn = $(".top-bar-section li:not(.has-form) a");
+
+  active_btn.css("background", "#333333");
 });
+
+
+ $(function(){
+    $("ul#ticker01").liScroll();
+});
+
+
+
+
