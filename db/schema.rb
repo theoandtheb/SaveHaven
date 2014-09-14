@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20140914033455) do
     t.string   "phone"
   end
 
-
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "email"
