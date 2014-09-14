@@ -4,21 +4,21 @@
 <div class="medium-10 medium-offset-1 columns tag">
   <p id="notice"><%= notice %></p>
 
-  <p>
+<!--   <p>
     <strong>Location:</strong>
-    <%= @tag.location %>
+    <%#= @tag.location %>
   </p>
 
   <p>
     <strong>Note:</strong>
-    <%= @tag.note %>
-  </p>
+    <%#= @tag.note %>
+  </p> -->
 
 
-  <p>
+ <!--  <p>
     <strong>Url:</strong>
-    <a href ="<%= @tag.url %>"><%= @tag.url %></a>
-  </p>
+    # <a href ="<%#= @tag.url %>"><%#= @tag.url %></a>
+  </p> -->
 
   <% if @tag.note != "" %> 
     <%= render 'note' %>
@@ -40,7 +40,7 @@
   <% end %>
 
 
-  <p>
+<!--   <p>
     <strong>Audio:</strong><br>
     <audio controls><source src="<%= @tag.audio %>" type="audio/mpeg"></audio>
   </p>
@@ -53,7 +53,7 @@
   <p>
     <strong>Image:</strong>
     <img src="<%= @tag.image %>">
-  </p>
+  </p> -->
 
   <%= link_to 'Edit', edit_tag_path(@tag) %> |
   <%= link_to 'Back', tags_path %>
