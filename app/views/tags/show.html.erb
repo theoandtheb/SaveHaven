@@ -1,26 +1,28 @@
+
+<div class="row">
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @tag.location %>
-</p>
-<p>
-  <strong>Url:</strong>
-  <a href ="<%= @tag.url %>"><%= @tag.url %></a>
-</p>
-
-<% if @tag.audio %>
-  <% render 'audio'%> 
-<% elsif @tag.video %> 
-  <% render 'video' %>
-<% elsif @tag.note %> 
-  <% render 'note' %>
-<% elsif @tag.note %> 
-  <% render 'image' %>
-<% else %>
-  <h1>Sorry this tag has no content</h1>
+<% if @tag.url != "" %>
+  <%= render 'url'%> 
+<% end %>
+<% if @tag.audio != "" %>
+  <%= render 'audio'%> 
+<% end %>
+<% if @tag.video != "" %> 
+  <%= render 'video' %>
+<% end %>
+<% if @tag.note != "" %> 
+  <%= render 'note' %>
+<% end %>
+<% if @tag.note != "" %> 
+  <%= render 'image' %>
+<% end %>
+<% if @tag.phone != "" %> 
+  <%= render 'phone' %>
 <% end %>
 
-
-<%= link_to 'Edit', edit_tag_path(@tag) %> |
 <%= link_to 'Back', tags_path %>
+<%= link_to 'Edit', edit_tag_path(@tag) %>
+
+</div>

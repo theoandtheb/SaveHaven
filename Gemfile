@@ -12,17 +12,18 @@ gem 'spring',        group: :development
 gem 'foundation-rails'
 gem 'high_voltage'
 gem 'thin'
+gem 'pg'
 
 group :production, :staging do
 	gem 'rails_12factor'
-	gem 'pg' 
+
 end 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'pg'
+
 end
 
 
