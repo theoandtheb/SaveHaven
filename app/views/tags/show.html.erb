@@ -10,10 +10,31 @@
   <%= @tag.note %>
 </p>
 
+
 <p>
   <strong>Url:</strong>
   <a href ="<%= @tag.url %>"><%= @tag.url %></a>
 </p>
+
+<% if @tag.note != "" %> 
+  <%= render 'note' %>
+<% end %>
+<% if @tag.url != "" %>
+  <%= render 'url' %> 
+<% end %>
+<% if @tag.image != "" %> 
+  <%= render 'image' %>
+<% end %>
+<% if @tag.audio != "" %>
+  <%= render 'audio'%> 
+<% end %>
+<% if @tag.video != "" %> 
+  <%= render 'video' %>
+<% end %>
+<% if @tag.phone != "" %> 
+  <%= render 'phone' %>
+<% end %>
+
 
 <p>
   <strong>Audio:</strong>
