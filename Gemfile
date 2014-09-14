@@ -13,7 +13,14 @@ gem 'foundation-rails'
 gem 'high_voltage'
 gem 'thin'
 gem 'pg'
+gem 'carrierwave'
+# Use fog to support amazon s3 for carrierwave
+gem "fog"
+# Use amazons sdk
+gem 'aws-sdk'
 
+gem 'figaro'
+gem 'rmagick', :require => 'RMagick'
 group :production, :staging do
 	gem 'rails_12factor'
 
