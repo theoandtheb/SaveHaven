@@ -104,12 +104,20 @@ form label {
 	border-radius: 15px;
 }
 
+.visible_sm {
+		display: none;
+}
+
 
 @media screen and (max-width: 768px) {
 	audio, iframe {
 		width: 80%;
 		margin: 0 auto;
 	}
+
+	.visible_sm {
+		display: none;
+}
 
 }
 
