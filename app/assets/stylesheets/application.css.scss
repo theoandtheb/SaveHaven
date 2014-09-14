@@ -104,4 +104,21 @@ form label {
 	border-radius: 15px;
 }
 
+
+@media screen and (max-width: 768px) {
+	audio, iframe {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+}
+
+
+@media screen and (max-width: 460px) {
+	audio, iframe {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
 	
