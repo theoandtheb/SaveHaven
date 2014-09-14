@@ -40,8 +40,12 @@ body {
 	background: none;
 
 	.name a:hover {
-		background: none;
+		background: none!important;
 	}
+}
+
+.top-bar-section ul li {
+	background: none!important;
 }
 
 div#header {
