@@ -33,7 +33,11 @@
   </div>
   <div class="field">
     <%= f.label :image %><br>
-    <%= f.text_field :image %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
   </div>
   <div class="actions">
     <%= f.submit %>
