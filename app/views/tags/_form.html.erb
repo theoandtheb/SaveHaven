@@ -1,45 +1,51 @@
-<%= form_for(@tag) do |f| %>
-  <% if @tag.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+<div class="large-8 medium-centered columns ">
+    <div class="site forms">
+      
 
-      <ul>
-      <% @tag.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <%= form_for(@tag) do |f| %>
+      <% if @tag.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+
+          <ul>
+          <% @tag.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
+      <div class="field">
+        <%= f.label :location %><br>
+        <%= f.text_field :location %>
+      </div>
+      <div class="field">
+        <%= f.label :note %><br>
+        <%= f.text_area :note %>
+      </div>
+      <div class="field">
+        <%= f.label :url %><br>
+        <%= f.text_field :url %>
+      </div>
+      <div class="field">
+        <%= f.label :audio %><br>
+        <%= f.text_field :audio %>
+      </div>
+      <div class="field">
+        <%= f.label :video %><br>
+        <%= f.text_field :video %>
+      </div>
+      <div class="field">
+        <%= f.label :image %><br>
+        <%= f.file_field :image %>
+      </div>
+      <div class="field">
+        <%= f.label :phone %><br>
+        <%= f.text_field :phone %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note %>
-  </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
-  <div class="field">
-    <%= f.label :audio %><br>
-    <%= f.text_field :audio %>
-  </div>
-  <div class="field">
-    <%= f.label :video %><br>
-    <%= f.text_field :video %>
-  </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
