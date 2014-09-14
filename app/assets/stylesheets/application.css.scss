@@ -57,15 +57,19 @@ div#header {
 		}
 
 		h1 {
-			font-size: 65px;
+			font-size: 75px;
 			color: #ecf0f1;
-			margin-bottom: -40px;
+			margin-bottom: -20px;
+			border-top: 2px solid #ecf0f1;
+			border-bottom: 2px solid #ecf0f1;
+			padding: 2% 0;
 		}
 
 		.content {
 			margin: 5px 150px;
 
 			h2 {
+				font-size: 55px;
 				margin-top: 30px;
 				color: #ecf0f1;
 			}

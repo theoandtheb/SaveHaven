@@ -90,7 +90,7 @@ if( typeof Object.create !== 'function' ) {
 		});
 	}; 
 	$.fn.fadeThrough.options = {
-		interval: 6000,
+		interval: 4000,
 		fadeduration: 1000,
 		heightduration: 500,
 		animatestartheight: false,
