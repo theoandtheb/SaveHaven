@@ -1,8 +1,16 @@
+<link href='http://fonts.googleapis.com/css?family=Bentham' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+  $('body').css('background','#14110E');
+  $('.note').css('color','#EBE6E2');
+  </script>
+
+<p id="notice"><%= notice %></p>
+
 <div class="margin-10"></div>
 <div class="row">
 
-<div class="medium-10 medium-offset-1 columns tag">
-  <p id="notice"><%= notice %></p>
+
+  
 
 <!--   <p>
     <strong>Location:</strong>
@@ -21,39 +29,57 @@
   </p> -->
 
   <% if @tag.note != "" %> 
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'note' %>
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
+
+
   <% if @tag.url != "" %>
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'url' %> 
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
-  <% if @tag.image != "" %> 
+
+
+  <% unless @tag.image %> 
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'image' %>
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
+
+
   <% if @tag.audio != "" %>
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'audio'%> 
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
+
+
   <% if @tag.video != "" %> 
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'video' %>
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
+
+
   <% if @tag.phone != "" %> 
+    <div class="medium-10 medium-offset-1 columns tag">
     <%= render 'phone' %>
-  <% elsif %>
-    <p></p>
+    </div>
   <% end %>
 
 
   <%= link_to 'Edit', edit_tag_path(@tag) %> |
   <%= link_to 'Back', tags_path %>
 
-  </div>
 </div>
+</div>
+
+<script type="text/javascript">
+
+  
+  $(".note").css("font-size", (Math.floor($(window).width()/12)+'px'));
+  // $(window).addEventListener("resize", function(){
+  //   $(".note").css("font-size", (Math.floor($(window).width()/48)+'px'));});
+</script>

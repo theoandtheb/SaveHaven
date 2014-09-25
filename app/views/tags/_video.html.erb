@@ -1,10 +1,30 @@
-
+<!-- 
 <p class='hidden_sm'>
-  <iframe width="560" height="315" src="//<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="//www.youtube.com/embed/<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
 </p>
 
 
 <p class='visible_sm'>
-  <iframe width="400" height="215" src="//<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
-</p>
+  <iframe width="400" height="215" src="//www.youtube.com/embed/<%= @tag.video %>"frameborder="0" allowfullscreen></iframe>
+</p> -->
 
+<div id="ytplayer"></div>
+
+<script>
+  // Load the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // Replace the 'ytplayer' element with an <iframe> and
+  // YouTube player after the API code downloads.
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('ytplayer', {
+      height: (Math.floor($(window).width()*0.43875)),
+      width: (Math.floor($(window).width()*0.78)),
+      videoId: '<%= @tag.video %>'
+    });
+  }
+</script>

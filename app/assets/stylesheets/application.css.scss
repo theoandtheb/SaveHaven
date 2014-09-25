@@ -103,8 +103,8 @@ form label {
 
 
 .tag {
-	background: rgba(255, 255, 255,.5);
-	padding: 20px;
+	background: rgba(255, 255, 255,.05);
+	padding: 0.5%;
 	border-radius: 15px;
 }
 
@@ -139,6 +139,10 @@ form label {
 	.visible_sm {
 		display: block;
 	}
+}
+
+p {
+	margin-bottom: 0%;
 }
 
 	
